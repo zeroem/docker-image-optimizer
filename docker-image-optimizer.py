@@ -33,7 +33,7 @@ create_dirs = [
 ]
 
 def close_hook(conduit):
-  print("Running docker image optimizations...")
+  conduit.info(2, "Running docker image optimizations...")
 
   for d in delete_dirs:
     shutil.rmtree(d, True)
